@@ -17,10 +17,10 @@ class CreateParticuliersTable extends Migration
             $table->id();
             $table->string("nom");
             $table->string("prenom");
-            $table->string("cniClient");
-            $table->string("emailClient");
-            $table->string("telClient1");
-            $table->string("telClient2")->nullable();
+            $table->string("cniParticulier");
+            $table->string("emailParticulier");
+            $table->string("telParticulier1");
+            $table->string("telParticulier2")->nullable();
             $table->timestamps();
         });
     }
