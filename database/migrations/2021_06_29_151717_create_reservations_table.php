@@ -20,7 +20,6 @@ class CreateReservationsTable extends Migration
             $table->dateTime("dateDebut");
             $table->dateTime("dateFin");
             $table->dateTime("dateReservation");
-            $table->foreignId("client_id")->constrained();
             $table->foreignId("employe_id")->constrained();
             $table->foreignId("chauffeur_id")->constrained();
             $table->foreignId("particulier_id")->constrained();
