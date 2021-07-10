@@ -22,10 +22,10 @@ class ChauffeursFactory extends Factory
     public function definition()
     {
         return [
-            "nom" => $this-> faker-> lastName,
-            "prenom" => $this-> faker-> firstName,
-            "telChauffeur" => $this-> faker-> phoneNumber,
-            "cniChauffeur" => $this-> faker-> creditCardNumber,
+            "nom"            => $this-> faker-> lastName,
+            "prenom"         => $this-> faker-> firstName,
+            "telChauffeur"   => $this-> faker-> phoneNumber,
+            "cniChauffeur"   => $this-> faker-> creditCardNumber,
         ];
     }
 }

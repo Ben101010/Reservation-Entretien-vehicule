@@ -22,13 +22,13 @@ class EmployesFactory extends Factory
     public function definition()
     {
         return [
-            "nom" => $this-> faker-> lastName,
-            "prenom" => $this-> faker-> firstName,
-            "telEmploye" => $this-> faker-> phoneNumber,
-            "cniEmploye" => $this-> faker-> creditCardNumber,
-            "login" => $this-> faker-> safeEmail,
-            "password" => $this-> faker-> md5,
-            "photo" => $this-> faker-> imageUrl(),
+            "nom"          => $this-> faker-> lastName,
+            "prenom"       => $this-> faker-> firstName,
+            "telEmploye"   => $this-> faker-> phoneNumber,
+            "cniEmploye"   => $this-> faker-> creditCardNumber,
+            "login"        => $this-> faker-> safeEmail,
+            "password"     => $this-> faker-> md5,
+            "photo"        => $this-> faker-> imageUrl(),
         ];
     }
 }

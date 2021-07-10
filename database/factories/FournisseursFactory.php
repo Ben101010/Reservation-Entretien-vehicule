@@ -22,10 +22,10 @@ class FournisseursFactory extends Factory
     public function definition()
     {
         return [
-            "nom" => $this-> faker-> lastName,
-            "prenom" => $this-> faker-> firstName,
-            "telFournisseur" => $this-> faker-> phoneNumber,
-            "addresseFournisseur" => $this-> faker-> address,
+            "nom"                    => $this-> faker-> lastName,
+            "prenom"                 => $this-> faker-> firstName,
+            "telFournisseur"         => $this-> faker-> phoneNumber,
+            "addresseFournisseur"    => $this-> faker-> address,
         ];
     }
 }

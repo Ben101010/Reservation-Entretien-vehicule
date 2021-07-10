@@ -10,6 +10,6 @@ class NatureRevision extends Model
     use HasFactory;
 
     public function vehicules(){
-        return $this->belongsToMany("Vehicule,::class", "est_revisionner", "natureRevision_id", "vehicule_id")->withTimestamps();
+        return $this->belongsToMany("Vehicule::class", "est_revisionner", "natureRevision_id", "vehicule_id")->withTimestamps();
     }
 }

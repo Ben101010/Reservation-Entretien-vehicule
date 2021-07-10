@@ -22,7 +22,7 @@ class GaragesFactory extends Factory
     public function definition()
     {
         return [
-            "nom" => $this-> faker-> lastName,
+            "nom"           => $this-> faker-> lastName,
             "adresseGarage" => $this-> faker-> address,
         ];
     }

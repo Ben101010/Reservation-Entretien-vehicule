@@ -10,10 +10,10 @@ class PieceDefectueuse extends Model
     use HasFactory;
 
     public function frnssr(){
-        return $this->belongsTo("Fournissuer,::class","fournisseur_id", "id");
+        return $this->belongsTo("Fournissuer::class","fournisseur_id", "id");
     }
 
     public function mtnce(){
-        return $this->belongsTo("Maintenance,::class","maintenance_id", "id");
+        return $this->belongsTo("Maintenance::class","maintenance_id", "id");
     }
 }
