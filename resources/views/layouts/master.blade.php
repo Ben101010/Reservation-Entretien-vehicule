@@ -25,6 +25,8 @@
 	<!-- Custom CSS -->
 	<link href="{{ asset('dist/css/style.css')}}" rel="stylesheet" type="text/css">
 
+    @yield("styles")
+
     @livewireStyles
 </head>
 
@@ -34,7 +36,7 @@
 		<div class="la-anim-1"></div>
 	</div>
 	<!-- /Preloader -->
-    <div class="wrapper">
+    <div class="wrapper slide-nav-toggle">
 			<!-- Top Menu Items -->
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block mr-20 pull-left" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -65,19 +67,13 @@
 			<div class="fixed-sidebar-left">
 				<ul class="nav navbar-nav side-nav nicescroll-bar">
 					<li>
-						<a  class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr"><i class="icon-picture mr-10"></i>Dashboard <span class="pull-right"><span class="label label-success mr-10">4</span><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<a  class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr"><i class="icon-picture mr-10"></i>Gestion des marques <i class="fa fa-fw fa-angle-down"></i></span></a>
 						<ul id="dashboard_dr" class="collapse collapse-level-1">
 							<li>
-								<a class="active" href="index.html">Analytical</a>
+								<a class="active" href="{{ route('marques.liste') }}">Liste des marques</a>
 							</li>
 							<li>
-								<a href="index2.html">Demographic</a>
-							</li>
-							<li>
-								<a href="index3.html">Project</a>
-							</li>
-							<li>
-								<a href="index4.html">Classic</a>
+								<a href="{{ route('marques.create') }}">Nouvelle marque</a>
 							</li>
 						</ul>
 					</li>
@@ -91,22 +87,9 @@
 		<div class="page-wrapper">
             <div class="container-fluid">
 
-				<!-- Title -->
-				<div class="row heading-bg  bg-red">
-					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-						<h5 class="txt-light">analytical</h5>
-					</div>
-					<!-- Breadcrumb -->
-					<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Dashboard</a></li>
-							<li><a href="#"><span>dashboard</span></a></li>
-							<li class="active"><span>analytical</span></li>
-						</ol>
-					</div>
-					<!-- /Breadcrumb -->
-				</div>
-				<!-- /Title -->
+                @yield("content")
+
+
 
 			</div>
 			<!-- Footer -->
@@ -159,11 +142,7 @@
 	<!-- Fancy Dropdown JS -->
 	<script src="{{ asset('dist/js/dropdown-bootstrap-extended.js') }} "></script>
 
-	<!-- Sparkline JavaScript -->
-	<script src="{{ asset('vendors/jquery.sparkline/dist/jquery.sparkline.min.js') }} "></script>
 
-	<!-- ChartJS JavaScript -->
-	<script src="{{ asset('vendors/chart.js/Chart.min.js') }} "></script>
 
 	<!-- Morris Charts JavaScript -->
     <script src="{{ asset('vendors/bower_components/raphael/raphael.min.js') }} "></script>
@@ -174,7 +153,8 @@
 
 	<!-- Init JavaScript -->
 	<script src="{{ asset('dist/js/init.js') }} "></script>
-	<script src="{{ asset('dist/js/dashboard-data.js') }} "></script>
+
+    @yield("scripts")
 
     @livewireScripts
 

@@ -13,3 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [\App\Http\Controllers\IndexController::class,'index']);
+
+Route::get("/marques", function(){
+    return view("marques.liste");
+})->name("marques.liste");
+
+Route::get("/marques/new", function(){
+    return view("marques.create");
+})->name("marques.create");
